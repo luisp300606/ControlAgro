@@ -24,25 +24,18 @@
 
 ## 2. Problema y usuarios
 
-*Instrucción: qué problema resuelve, a quién le sirve y, muy importante, qué hace esa gente hoy para arreglárselas sin el sistema. Esa última parte es la que revela el problema real.*
+**El problema: Los agricultores no cuentan con un registro formal de cuanta cantidad de agroquímocos utilizan por lote comprado, el sistema que planteamos hará registro de los productos utilizados para prevenir gastar de más o evitar usar distintos tipos de marcas con el fin de no dañar la siembra**
 
-**El problema:**
-
-**Cómo se resuelve hoy sin el sistema:**
+**Cómo se resuelve hoy sin el sistema: **
 
 **Usuarios del sistema:**
 
 | Tipo de usuario | Qué necesita del sistema | Qué le preocupa |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|Trabajador de campo |Registrar rápido qué usó, en qué parcela y cuánto, sin perder tiempo de trabajo |Que llenar el registro no le quite tiempo ni sea complicado en pleno trabajo de campo |
+|Agricultor dueño de la empresa |Ver el total gastado por temporada, por parcela y por tipo de producto, para planear la próxima compra |Que los datos sean exactos y confiables, no solo "aproximados" |
 
-*Instrucción: necesitas al menos dos tipos de usuario con necesidades distintas. Si los dos quieren exactamente lo mismo, probablemente sean el mismo usuario.*
-
-**Un conflicto entre usuarios:**
-
-*Instrucción: describe algo que un usuario quiera y que a otro le estorbe. Ahí está tu primera decisión de diseño real.*
+**El trabajador de campo quiere anotar lo mínimo posible porque está apurado y con las manos ocupadas. El encargado, en cambio, necesita el dato exacto: cuánto producto, en qué momento, y en qué parcela específica, porque de eso depende que el reporte final sirva para algo. Si el sistema le pide al trabajador demasiados datos, este dejará de usarlo; si le pide muy pocos, el reporte no le sirve al encargado.**
 
 ---
 
