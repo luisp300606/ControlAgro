@@ -45,20 +45,23 @@
 
 ### Dentro del alcance
 
--
--
--
--
+-Registro de aplicaciones de agroquímicos: producto usado, cantidad aplicada, fecha, quién la aplicó, y a qué parcela(cultivo) corresponde.
+-Catálogo de productos agroquímicos (fertilizantes, pesticidas, herbicidas, etc.) con su unidad de medida (litros, kilos, etc.).
+-Registro de la cantidad disponible de cada producto al inicio de la temporada.
+-Cálculo automático del total de producto usado por parcela, por cultivo y por temporada completa.
+-Cálculo y visualización del producto sobrante después de cada aplicación (cantidad disponible − cantidad aplicada = sobrante), mostrado como un número.
+-Reporte de consumo por tipo de producto y por tipo de cultivo, visible para el encargado o dueño.
 
 ### Explícitamente fuera del alcance
 
--
--
--
+-Cultivos mixtos o rotación de cultivos dentro de la misma parcela en una misma temporada.
+-Recomendaciones automáticas de dosis o mezcla de agroquímicos según tipo de cultivo o plaga.
+-Alertas o notificaciones automáticas de stock bajo — el sistema muestra el sobrante, pero no avisa activamente; si el usuario quiere saber, tiene que consultarlo.
 
 **Por qué queda fuera:**
 
-*Instrucción: para al menos una de las exclusiones, explica la razón. Puede ser tiempo, complejidad, o que no aporta al problema central.*
+-Gestión de compras a proveedores: el problema central es saber cuánto producto se aplica y cuánto sobra, no cómo se compra. Meter proveedores, precios y facturación implica otro flujo completo que no ayuda a resolver el desperdicio — solo alargaría el desarrollo sin acercarnos a la meta.
+-El sistema se centra en registrar y contabilizar, proyectando la información obtenida sin dar recomendaciones ni alertas molestas. 
 
 ---
 
