@@ -18,7 +18,7 @@
 
 ## 1. Descripción del sistema
 
-**Nombre del sistema:ControlAgro**
+**Nombre del sistema: ControlAgro**
 
 **Descripción: Es un sistema que ayuda a los productores agrícolas a llevar la cuenta de cuántos fertilizantes, pesticidas y otros productos para el campo se usan durante una temporada de siembra, todo esto con el fin de registrar lo comprado y utilizado para evitar gastos innecesarios.**
 
