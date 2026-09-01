@@ -8,8 +8,10 @@
 
 ---
 
-**Autor:**
+**Autor: Luis Pablo Apodaca Bojorquez**
+
 **Fecha de la última versión:**
+
 **Repositorio:**
 
 ---
@@ -18,7 +20,7 @@
 
 **Nombre del sistema:ControlAgro**
 
-**Descripción:Es un sistema que ayuda a los productores agrícolas a llevar la cuenta de cuántos fertilizantes, pesticidas y otros productos para el campo se usan durante una temporada de siembra, todo esto con el fin de registrar lo comprado y utilizado para evitar gastos innecesarios.**
+**Descripción: Es un sistema que ayuda a los productores agrícolas a llevar la cuenta de cuántos fertilizantes, pesticidas y otros productos para el campo se usan durante una temporada de siembra, todo esto con el fin de registrar lo comprado y utilizado para evitar gastos innecesarios.**
 
 ---
 
@@ -26,7 +28,6 @@
 
 **El problema: Los agricultores no cuentan con un registro formal de cuanta cantidad de agroquímocos utilizan por lote comprado, el sistema que planteamos hará registro de los productos utilizados para prevenir gastar de más o evitar usar distintos tipos de marcas con el fin de no dañar la siembra**
 
-**Cómo se resuelve hoy sin el sistema: **
 
 **Usuarios del sistema:**
 
@@ -40,8 +41,6 @@
 ---
 
 ## 3. Alcance
-
-*Instrucción: lo que escribes en "fuera del alcance" es lo que después evita que el proyecto crezca sin control. Sé específico: "reportes" no dice nada, "reportes de ventas mensuales exportables a PDF" sí.*
 
 ### Dentro del alcance
 
@@ -75,51 +74,51 @@
 
 ## 4. Tipo de sistema y restricciones
 
-*Instrucción: identifica de qué tipo es tu sistema y qué te obliga a garantizar ese tipo. Un sistema de información y un sistema crítico no se diseñan igual.*
-
 **Tipo de sistema:**
 
-*(De información · Embebido · Crítico · Web y SaaS · De datos y análisis)*
+*De información*
 
-**Por qué es de ese tipo:**
+**-El sistema no controla ni automatiza nada físico, y su falla temporal no pone en riesgo vidas ni operaciones críticas. Su función esencial es capturar, organizar y mostrar información para que las personas tomen mejores decisiones.**
 
 **Atributos de calidad que impone:**
 
 | Atributo | Por qué importa en mi caso | Qué pasa si no se cumple |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|Usabilidad |El trabajador de campo lo usa con las manos ocupadas, con prisa, y no necesariamente es una persona técnica |Si es lento o complicado, deja de registrar y vuelve la libreta|
+|Exactitud de los datos |Los totales de consumo y sobrante dependen 100% de que cada registro esté bien capturado |Datos mal capturados llevan a decisiones de compra o uso equivocadas |
+|Disponibilidad razonable |Debe funcionar cuando se necesita, pero no requiere estar activo 24/7 sin interrupción |Una caída momentánea no es grave: se anota en papel y se captura después |
 
 **Reglas de negocio que ya identifiqué:**
 
-*Instrucción: reglas que no son obvias desde fuera y que alguien que conoce el dominio tendría que explicarte. Si no encuentras ninguna, tu caso puede ser demasiado simple.*
-
-1.
-2.
-3.
+1.Una parcela tiene un único cultivo asignado por temporada
+2.La cantidad aplicada de un producto nunca puede dejar el sobrante en negativo , si se intenta registrar más de lo disponible, el sistema debe señalarlo como inconsistencia, no simplemente restar.
+3.Cada aplicación debe quedar ligada a una parcela con cultivo ya definido, no se puede registrar una aplicación sin saber a qué cultivo pertenece.
+4.El stock/sobrante de cada producto es único para toda la finca, no por parcela.
 
 ---
 
 ## 5. Ciclo de vida elegido
 
-*Instrucción: este apartado se trabaja en la semana 3, después de ver los modelos de desarrollo. La justificación pesa más que la elección: no hay un modelo correcto, hay uno defendible para tu caso.*
-
-**Modelo elegido:**
+**Modelo elegido: Prototipado Rápido**
 
 **Por qué le conviene a este proyecto:**
 
-*Instrucción: argumenta con las características reales de tu caso. Estabilidad de los requisitos, disponibilidad del cliente, nivel de riesgo, tamaño del equipo, frecuencia de entregas esperada.*
+**-Estabilidad de los requisitos: baja al inicio. Quedó demostrado en esta misma conversación: el cliente no tenía claro si habría control de inventario, ni cómo debía vincularse el registro con el cultivo, hasta que se le preguntó directamente y vio ejemplos concretos.**
+
+**Disponibilidad del cliente: el cliente puede validar entregas concretas mejor que responder preguntas abstractas sobre "requisitos". Ya se vio que las respuestas más útiles salieron de ejemplos concretos, no de preguntas teóricas.**
+
+**Nivel de riesgo: bajo. No hay riesgo técnico alto ni riesgo de negocio grave si el primer prototipo no es perfecto se puede desechar o ajustar sin gran costo.**
+
 
 ### Alternativas descartadas
 
-**Alternativa 1:**
+**Alternativa 1: Cascada**
 
-*Por qué la descarté:*
+**Cascada exige requisitos completos y estables desde el inicio, congelados antes de construir. Aquí el alcance se fue descubriendo activamente durante las primeras conversaciones con el cliente.**
 
-**Alternativa 2:**
+**Alternativa 2: Espiral**
 
-*Por qué la descarté:*
+**Espiral está diseñado para proyectos de alto riesgo, donde cada ciclo requiere un análisis de riesgo formal antes de avanzar. Este sistema no maneja dinero ni operaciones críticas, y no usa tecnología experimental**
 
 ---
 
