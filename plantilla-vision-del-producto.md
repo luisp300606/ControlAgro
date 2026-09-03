@@ -90,10 +90,13 @@
 
 **Reglas de negocio que ya identifiqué:**
 
-1.Una parcela tiene un único cultivo asignado por temporada
-2.La cantidad aplicada de un producto nunca puede dejar el sobrante en negativo , si se intenta registrar más de lo disponible, el sistema debe señalarlo como inconsistencia, no simplemente restar.
-3.Cada aplicación debe quedar ligada a una parcela con cultivo ya definido, no se puede registrar una aplicación sin saber a qué cultivo pertenece.
-4.El stock/sobrante de cada producto es único para toda la finca, no por parcela.
+1. Una parcela tiene un único cultivo asignado por temporada
+
+2. La cantidad aplicada de un producto nunca puede dejar el sobrante en negativo , si se intenta registrar más de lo disponible, el sistema debe señalarlo como inconsistencia, no simplemente restar.
+
+3. Cada aplicación debe quedar ligada a una parcela con cultivo ya definido, no se puede registrar una aplicación sin saber a qué cultivo pertenece.
+
+4. El stock/sobrante de cada producto es único para toda la finca, no por parcela.
 
 ---
 
