@@ -1,79 +1,124 @@
-1. Descripción del sistema
-Instrucción: nombre del sistema y qué hace, en un párrafo que cualquier persona entienda sin ser del área. Si necesitas usar una palabra técnica para explicarlo, todavía no está listo.
+# Visión del producto
 
-Nombre del sistema: ControlAgro
+---
 
-Descripción: Es un sistema que ayuda a los productores agrícolas a llevar la cuenta de cuántos fertilizantes, pesticidas y otros productos para el campo se usan durante una temporada de siembra, todo esto con el fin de registrar lo comprado y utilizado para evitar gastos innecesarios.
+**Autor: Luis Pablo Apodaca Bojorquez**
 
-2. Problema y usuarios
-Instrucción: qué problema resuelve, a quién le sirve y, muy importante, qué hace esa gente hoy para arreglárselas sin el sistema. Esa última parte es la que revela el problema real.
+**Fecha de la última versión:**
 
-El problema: Los agricultores no cuentan con un registro formal de cuanta cantidad de agroquímocos utilizan por lote comprado, el sistema que planteamos hará registro de los productos utilizados para prevenir gastar de más o evitar usar distintos tipos de marcas con el fin de no dañar la siembra
+**Repositorio:**
 
-Cómo se resuelve hoy sin el sistema:
+---
 
-Usuarios del sistema:
+## 1. Descripción del sistema
 
-Tipo de usuario	Qué necesita del sistema	Qué le preocupa
-Instrucción: necesitas al menos dos tipos de usuario con necesidades distintas. Si los dos quieren exactamente lo mismo, probablemente sean el mismo usuario.
+**Nombre del sistema:**
 
-Un conflicto entre usuarios:
+**ControlAgro**
 
-Instrucción: describe algo que un usuario quiera y que a otro le estorbe. Ahí está tu primera decisión de diseño real.
+Es un sistema que ayuda a los productores agrícolas a llevar la cuenta de cuántos fertilizantes, pesticidas y otros productos para el campo se usan durante una temporada de siembra, todo esto con el fin de registrar lo comprado y utilizado para evitar gastos innecesarios.
 
-3. Alcance
-Instrucción: lo que escribes en "fuera del alcance" es lo que después evita que el proyecto crezca sin control. Sé específico: "reportes" no dice nada, "reportes de ventas mensuales exportables a PDF" sí.
+---
 
-Dentro del alcance
-Explícitamente fuera del alcance
-Por qué queda fuera:
+## 2. Problema y usuarios
 
-Instrucción: para al menos una de las exclusiones, explica la razón. Puede ser tiempo, complejidad, o que no aporta al problema central.
+Los agricultores no cuentan con un registro formal de cuanta cantidad de agroquímocos utilizan por lote comprado, el sistema que planteamos hará registro de los productos utilizados para prevenir gastar de más o evitar usar distintos tipos de marcas con el fin de no dañar la siembra
 
-4. Tipo de sistema y restricciones
-Instrucción: identifica de qué tipo es tu sistema y qué te obliga a garantizar ese tipo. Un sistema de información y un sistema crítico no se diseñan igual.
 
-Tipo de sistema:
+**Usuarios del sistema:**
 
-(De información · Embebido · Crítico · Web y SaaS · De datos y análisis)
+| Tipo de usuario | Qué necesita del sistema | Qué le preocupa |
+|---|---|---|
+|Trabajador de campo |Registrar rápido qué usó, en qué parcela y cuánto, sin perder tiempo de trabajo |Que llenar el registro no le quite tiempo ni sea complicado en pleno trabajo de campo |
+|Agricultor dueño de la empresa |Ver el total gastado por temporada, por parcela y por tipo de producto, para planear la próxima compra |Que los datos sean exactos y confiables, no solo "aproximados" |
 
-Por qué es de ese tipo:
+El trabajador de campo quiere anotar lo mínimo posible porque está apurado y con las manos ocupadas. El encargado, en cambio, necesita el dato exacto: cuánto producto, en qué momento, y en qué parcela específica, porque de eso depende que el reporte final sirva para algo. Si el sistema le pide al trabajador demasiados datos, este dejará de usarlo; si le pide muy pocos, el reporte no le sirve al encargado.
 
-Atributos de calidad que impone:
+---
 
-Atributo	Por qué importa en mi caso	Qué pasa si no se cumple
-Reglas de negocio que ya identifiqué:
+## 3. Alcance
 
-Instrucción: reglas que no son obvias desde fuera y que alguien que conoce el dominio tendría que explicarte. Si no encuentras ninguna, tu caso puede ser demasiado simple.
+### Dentro del alcance
 
-5. Ciclo de vida elegido
-Instrucción: este apartado se trabaja en la semana 3, después de ver los modelos de desarrollo. La justificación pesa más que la elección: no hay un modelo correcto, hay uno defendible para tu caso.
+* Registro de aplicaciones de agroquímicos: producto usado, cantidad aplicada, fecha, quién la aplicó, y a qué parcela(cultivo) corresponde.
 
-Modelo elegido:
+* Catálogo de productos agroquímicos (fertilizantes, pesticidas, herbicidas, etc.) con su unidad de medida (litros, kilos, etc.).
 
-Por qué le conviene a este proyecto:
+* Registro de la cantidad disponible de cada producto al inicio de la temporada.
 
-Instrucción: argumenta con las características reales de tu caso. Estabilidad de los requisitos, disponibilidad del cliente, nivel de riesgo, tamaño del equipo, frecuencia de entregas esperada.
+* Cálculo automático del total de producto usado por parcela, por cultivo y por temporada completa.
 
-Alternativas descartadas
-Alternativa 1:
+* Cálculo y visualización del producto sobrante después de cada aplicación (cantidad disponible − cantidad aplicada = sobrante), mostrado como un número.
 
-Por qué la descarté:
+* Reporte de consumo por tipo de producto y por tipo de cultivo, visible para el encargado o dueño.
 
-Alternativa 2:
+### Explícitamente fuera del alcance
 
-Por qué la descarté:
+* Cultivos mixtos o rotación de cultivos dentro de la misma parcela en una misma temporada.
 
-Antes de entregar
-Reviso que el documento cumpla lo siguiente:
+* Recomendaciones automáticas de dosis o mezcla de agroquímicos según tipo de cultivo o plaga.
 
-[ ] La descripción del apartado 1 se entiende sin ser del área
-[ ] Hay al menos dos tipos de usuario con necesidades distintas
-[ ] Identifiqué un conflicto real entre usuarios
-[ ] El alcance dice qué queda fuera, no solo qué queda dentro
-[ ] Las exclusiones son específicas, no genéricas
-[ ] Identifiqué el tipo de sistema y al menos dos atributos de calidad
-[ ] Anoté al menos tres reglas de negocio no obvias
-[ ] Justifiqué el ciclo de vida contra dos alternativas descartadas
-[ ] El documento está en mi repositorio y se puede leer desde el navegador
-[ ] Borré todas las instrucciones en cursiva de la plantilla
+* Alertas o notificaciones automáticas de stock bajo — el sistema muestra el sobrante, pero no avisa activamente; si el usuario quiere saber, tiene que consultarlo.
+
+**Por qué queda fuera:**
+
+* Gestión de compras a proveedores: el problema central es saber cuánto producto se aplica y cuánto sobra, no cómo se compra. Meter proveedores, precios y facturación implica otro flujo completo que no ayuda a resolver el desperdicio — solo alargaría el desarrollo sin acercarnos a la meta.
+
+* El sistema se centra en registrar y contabilizar, proyectando la información obtenida sin dar recomendaciones ni alertas molestas. 
+
+---
+
+## 4. Tipo de sistema y restricciones
+
+**Tipo de sistema:**
+
+*De información*
+
+-El sistema no controla ni automatiza nada físico, y su falla temporal no pone en riesgo vidas ni operaciones críticas. Su función esencial es capturar, organizar y mostrar información para que las personas tomen mejores decisiones.
+
+**Atributos de calidad que impone:**
+
+| Atributo | Por qué importa en mi caso | Qué pasa si no se cumple |
+|---|---|---|
+|Usabilidad |El trabajador de campo lo usa con las manos ocupadas, con prisa, y no necesariamente es una persona técnica |Si es lento o complicado, deja de registrar y vuelve la libreta|
+|Exactitud de los datos |Los totales de consumo y sobrante dependen 100% de que cada registro esté bien capturado |Datos mal capturados llevan a decisiones de compra o uso equivocadas |
+|Disponibilidad razonable |Debe funcionar cuando se necesita, pero no requiere estar activo 24/7 sin interrupción |Una caída momentánea no es grave: se anota en papel y se captura después |
+
+**Reglas de negocio que ya identifiqué:**
+
+* Una parcela tiene un único cultivo asignado por temporada
+
+* La cantidad aplicada de un producto nunca puede dejar el sobrante en negativo , si se intenta registrar más de lo disponible, el sistema debe señalarlo como inconsistencia, no simplemente restar.
+
+* Cada aplicación debe quedar ligada a una parcela con cultivo ya definido, no se puede registrar una aplicación sin saber a qué cultivo pertenece.
+
+* El stock/sobrante de cada producto es único para toda la finca, no por parcela.
+
+---
+
+## 5. Ciclo de vida elegido
+
+**Modelo elegido:**
+
+*Prototipado Rápido*
+
+**Por qué le conviene a este proyecto:**
+
+* Estabilidad de los requisitos: baja al inicio. Quedó demostrado en esta misma conversación: el cliente no tenía claro si habría control de inventario, ni cómo debía vincularse el registro con el cultivo, hasta que se le preguntó directamente y vio ejemplos concretos.
+
+* Disponibilidad del cliente: el cliente puede validar entregas concretas mejor que responder preguntas abstractas sobre "requisitos". Ya se vio que las respuestas más útiles salieron de ejemplos concretos, no de preguntas teóricas.
+
+Nivel de riesgo: bajo. No hay riesgo técnico alto ni riesgo de negocio grave si el primer prototipo no es perfecto se puede desechar o ajustar sin gran costo.
+
+
+### Alternativas descartadas
+
+**Alternativa 1: Cascada**
+
+Cascada exige requisitos completos y estables desde el inicio, congelados antes de construir. Aquí el alcance se fue descubriendo activamente durante las primeras conversaciones con el cliente.
+
+**Alternativa 2: Espiral**
+
+Espiral está diseñado para proyectos de alto riesgo, donde cada ciclo requiere un análisis de riesgo formal antes de avanzar. Este sistema no maneja dinero ni operaciones críticas, y no usa tecnología experimental
+
+---
