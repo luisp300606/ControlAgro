@@ -1,11 +1,5 @@
 # Visión del producto
 
-> **Plantilla del curso · Ingeniería de Software I · SIS3407**
-> Este documento es el primer entregable del semestre y la base de todo lo que viene después.
-> Se entrega completo en la **semana 4** y se presenta ante el grupo.
->
-> **Cómo usarla:** copia este archivo a tu repositorio como `docs/vision-del-producto.md`, borra las instrucciones en gris de cada apartado y escribe tu contenido en su lugar. Conserva los títulos.
-
 ---
 
 **Autor: Luis Pablo Apodaca Bojorquez**
