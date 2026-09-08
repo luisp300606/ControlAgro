@@ -14,7 +14,7 @@
 
 **Nombre del sistema:**
 
-**ControlAgro**
+*ControlAgro*
 
 Es un sistema que ayuda a los productores agrícolas a llevar la cuenta de cuántos fertilizantes, pesticidas y otros productos para el campo se usan durante una temporada de siembra, todo esto con el fin de registrar lo comprado y utilizado para evitar gastos innecesarios.
 
@@ -74,7 +74,7 @@ El trabajador de campo quiere anotar lo mínimo posible porque está apurado y c
 
 *De información*
 
--El sistema no controla ni automatiza nada físico, y su falla temporal no pone en riesgo vidas ni operaciones críticas. Su función esencial es capturar, organizar y mostrar información para que las personas tomen mejores decisiones.
+El sistema no controla ni automatiza nada físico, y su falla temporal no pone en riesgo vidas ni operaciones críticas. Su función esencial es capturar, organizar y mostrar información para que las personas tomen mejores decisiones.
 
 **Atributos de calidad que impone:**
 
@@ -100,20 +100,24 @@ El trabajador de campo quiere anotar lo mínimo posible porque está apurado y c
 
 **Modelo elegido:**
 
-*Prototipado Rápido*
+*Ágil*
 
 **Por qué le conviene a este proyecto:**
 
-* Estabilidad de los requisitos: baja al inicio. Quedó demostrado en esta misma conversación: el cliente no tenía claro si habría control de inventario, ni cómo debía vincularse el registro con el cultivo, hasta que se le preguntó directamente y vio ejemplos concretos.
+* Riesgo de negocio, no técnico: el riesgo principal identificado no es técnico sino de entender bien lo que el usuario necesita
 
-* Disponibilidad del cliente: el cliente puede validar entregas concretas mejor que responder preguntas abstractas sobre "requisitos". Ya se vio que las respuestas más útiles salieron de ejemplos concretos, no de preguntas teóricas.
+* Entregas frecuentes: con un cliente disponible, tiene sentido entregar en incrementos pequeños y frecuentes e ir ajustando con retroalimentación real en cada entrega, en vez de un solo prototipo o una sola entrega final.
 
-Nivel de riesgo: bajo. No hay riesgo técnico alto ni riesgo de negocio grave si el primer prototipo no es perfecto se puede desechar o ajustar sin gran costo.
+**Nivel de riesgo:**
+
+*Bajo*
+
+* El riesgo es de coordinación, y se mitiga fácilmente con cosas simples: definir iteraciones cortas y con objetivo claro, y confirmar de antemano con el cliente en qué momentos del año sí estará disponible.
 
 
 ### Alternativas descartadas
 
-**Alternativa 1: Cascada**
+**Alternativa 1: Prototipado rápido**
 
 Cascada exige requisitos completos y estables desde el inicio, congelados antes de construir. Aquí el alcance se fue descubriendo activamente durante las primeras conversaciones con el cliente.
 
