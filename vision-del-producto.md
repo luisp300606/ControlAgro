@@ -119,7 +119,7 @@ El sistema no controla ni automatiza nada físico, y su falla temporal no pone e
 
 **Alternativa 1: Prototipado rápido**
 
-Cascada exige requisitos completos y estables desde el inicio, congelados antes de construir. Aquí el alcance se fue descubriendo activamente durante las primeras conversaciones con el cliente.
+Es ideal cuando los requisitos son difíciles de articular y el cliente necesita ver algo tangible para descubrir qué necesita. Ágil logra lo mismo de manera continua durante todo el desarrollo, en vez de limitarse a una fase de exploración antes de construir el sistema completo.
 
 **Alternativa 2: Espiral**
 
