@@ -39,7 +39,7 @@
 | Usuario | Qué hace hoy sin el sistema | Qué espera del sistema |
 |---------|-----------------------------|------------------------|
 | Trabajador de campo | Aplica el producto por indicación del encargado; no deja ningún registro formal, a veces mide por estimado cuando queda poco producto | Registrar su aplicación rápido, con los datos mínimos (fecha, producto, cantidad, parcela, cultivo) |
-| Encargado (Agrícola Barceló, 200 hectáreas, papa y cardamomo) | Compra por lote y lo va usando sin medir; revisa la bodega a ojo; solo se entera de que "se acabó" cuando ya no queda nada; vuelve a comprar "más o menos lo mismo" | Saber cuánto se aplicó por parcela y cultivo, cuánto queda disponible de cada producto, y cuándo hace falta comprar de nuevo. Disponible para revisar avances una vez por semana |
+| Encargado (Agrícola Barceló, 200 hectáreas, papa y cártamo) | Compra por lote y lo va usando sin medir; revisa la bodega a ojo; solo se entera de que "se acabó" cuando ya no queda nada; vuelve a comprar "más o menos lo mismo" | Saber cuánto se aplicó por parcela y cultivo, cuánto queda disponible de cada producto, y cuándo hace falta comprar de nuevo. Disponible para revisar avances una vez por semana |
 
 **Conflictos identificados entre usuarios:** El trabajador de campo prioriza rapidez al registrar; el encargado necesita el dato exacto para que el reporte sirva. Además, el encargado necesita poder **corregir** registros con errores (confirmado en la entrevista, pregunta 12), pero esa corrección debe quedar controlada — si cualquiera pudiera editar libremente, se perdería la confianza en los totales que el propio sistema existe para dar.
 
@@ -110,7 +110,7 @@
 | Descripción | El sistema genera, para una temporada seleccionada, un reporte con el total de cada producto aplicado agrupado por cultivo, con cantidad y unidad de medida. |
 | Origen | Confirmado en entrevista, pregunta 31. |
 | Prioridad | Deseable |
-| Criterio de aceptación | Al generar el reporte de una temporada con datos conocidos, las cifras agrupadas por cultivo (papa, cardamomo) coinciden con lo esperado. |
+| Criterio de aceptación | Al generar el reporte de una temporada con datos conocidos, las cifras agrupadas por cultivo (papa, cártamo) coinciden con lo esperado. |
 | Relacionado con | RF-003, RNF-SEG-002 |
 
 #### RF-006 · Registrar lote de producto comprado
@@ -371,7 +371,7 @@ Existen aplicaciones registradas en la temporada seleccionada.
 **Escenario principal**
 1. El encargado abre la vista de reportes.
 2. El sistema solicita seleccionar una temporada.
-3. El encargado elige la temporada (papa o cardamomo, según el cultivo).
+3. El encargado elige la temporada (papa o cártamo, según el cultivo).
 4. El sistema agrupa y suma el total aplicado de cada producto por cultivo.
 5. El sistema muestra el reporte con cantidad total y unidad de medida por producto y cultivo.
 
@@ -400,7 +400,7 @@ La parcela ya existe en el catálogo de parcelas de la finca.
 **Escenario principal**
 1. El encargado selecciona una parcela y una temporada.
 2. El sistema muestra si la parcela ya tiene un cultivo asignado en esa temporada.
-3. El encargado asigna el cultivo correspondiente (papa o cardamomo).
+3. El encargado asigna el cultivo correspondiente (papa o cártamo).
 4. El sistema guarda la asignación y la asocia a esa parcela y temporada.
 
 **Flujos alternos**
@@ -437,7 +437,7 @@ RF-002, RF-009
 |-------|-----------|------------|---------|
 | 29/09/2026 | RF-001 a RF-005 | Se actualizó el campo Origen de "supuesto de diseño" a "confirmado en entrevista", con referencia a la pregunta específica | Se realizó la entrevista de elicitación con la ficha de Agrícola Barceló |
 | 29/09/2026 | RF-006, RF-007, RF-008, RF-009, RNF-SEG-002 | Se agregaron como requisitos nuevos | Aparecieron en la entrevista y no estaban contemplados en la versión anterior del documento |
-| 29/09/2026 | Sección 2 | Se actualizó la tabla de usuarios con datos reales de Agrícola Barceló (200 hectáreas, papa y cardamomo, disponibilidad semanal) | Confirmado en la ficha de dominio y la entrevista |
+| 29/09/2026 | Sección 2 | Se actualizó la tabla de usuarios con datos reales de Agrícola Barceló (200 hectáreas, papa y cártamo, disponibilidad semanal) | Confirmado en la ficha de dominio y la entrevista |
 | 29/09/2026 | RF-006, CU-03 | Se definió que no hay alias entre presentaciones/marcas: cada nombre comercial es un producto independiente en el catálogo | Confirmado por el cliente: el sobrante y el consumo se controlan por nombre comercial, sin unificación automática |
 | 29/09/2026 | Sección 5 | Se completaron los seis casos de uso (CU-01 a CU-06) con escenario principal, flujos alternos, pre/postcondición y requisitos relacionados | Cierre de la sección de casos de uso tras la entrevista |
 | 29/09/2026 | RF-004, RF-007, RF-009, RNF-TRZ-001, RNF-TRZ-002 (nuevo) | Se separó cada requisito para que exprese una sola condición: RF-004 quedó en un solo verbo, RF-007 se redujo a la autorización previa, y RNF-TRZ-001 se dividió en dos (restricción de edición e historial de cambios visible) | Ningún requisito debe unir dos condiciones distintas con "y" |
